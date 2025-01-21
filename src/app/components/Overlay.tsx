@@ -1,7 +1,6 @@
 // src/app/components/Overlay.tsx
 'use client';
 
-import { useState } from 'react';
 
 interface OverlayProps {
   isOpen: boolean;
