@@ -21,7 +21,7 @@ export default function RootLayout({
 
         {/* Contenido principal */}
         <div className="lg:flex lg:flex-1 lg:ml-20 lg:mt-0 mt-20">
-          <main className="flex-1 p-10">{children}</main>
+          <main className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10">{children}</main>
         </div>
 
         {/* Footer */}
