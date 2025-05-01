@@ -13,7 +13,8 @@ export default {
         whiteText: "#F5F5F5", // Textos y elementos destacados
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
+        doto: ['var(--font-doto)', 'sans-serif'],
       },
     },
   },
