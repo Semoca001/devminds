@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Overlay from './Overlay';  // Importamos el componente Overlay
+import Overlay from './Overlay';
 import Image from 'next/image';
 
 const Sidebar = () => {
@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <div>
       {/* Sidebar vertical para escritorio */}
-      <div className="hidden lg:flex fixed top-0 left-0 h-full w-20 bg-[#191919] border-r-2 border-white z-20 flex items-center justify-center">
+      <div className="hidden lg:block fixed top-0 left-0 h-full w-20 bg-[#191919] border-r-2 border-white z-20">
         <button
           onClick={toggleSidebar}
           className="absolute top-4 w-full flex items-center justify-center text-white"
@@ -63,7 +63,6 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* Llamamos al componente Overlay y pasamos el estado de isOpen */}
       <Overlay isOpen={isOpen} />
     </div>
   );
