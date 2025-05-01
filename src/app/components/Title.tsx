@@ -36,7 +36,7 @@ const Title = () => {
         style={{
           fontSize: "clamp(2.5rem, 12vw, 8rem)",
           lineHeight: "1.2",
-          fontFamily: "monospace",
+          fontFamily: "--font-roboto",
           whiteSpace: "pre",
         }}
         initial={{ opacity: 0, y: -20 }}
