@@ -1,5 +1,5 @@
-import Title from "./components/Title";
-import AboutUs from "./components/AboutUs";
+import Title from "@/app/components/Title";
+import AboutUs from "@/app/components/AboutUs";
 
 const Page = () => {
   return (

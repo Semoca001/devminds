@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Overlay from './Overlay';  // Importamos el componente Overlay
+import Image from 'next/image';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +14,27 @@ const Sidebar = () => {
   return (
     <div>
       {/* Sidebar vertical para escritorio */}
-      <div className="hidden lg:flex fixed top-0 left-0 h-full w-20 bg-[#191919] border-r-2 border-white z-20">
+      <div className="hidden lg:flex fixed top-0 left-0 h-full w-20 bg-[#191919] border-r-2 border-white z-20 flex items-center justify-center">
         <button
           onClick={toggleSidebar}
-          className="absolute top-4 left-4 text-white text-3xl"
+          className="absolute top-4 w-full flex items-center justify-center text-white"
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         >
-          {isOpen ? '×' : '☰'}
+          {isOpen ? (
+            <Image 
+              src="/close.svg" 
+              alt="Cerrar menú" 
+              width={36} 
+              height={36} 
+            />
+          ) : (
+            <Image 
+              src="/menu.svg" 
+              alt="Abrir menú" 
+              width={36} 
+              height={36} 
+            />
+          )}
         </button>
       </div>
 
@@ -26,9 +42,24 @@ const Sidebar = () => {
       <div className="lg:hidden fixed top-0 left-0 w-full bg-[#191919] border-b-2 border-white z-20">
         <button
           onClick={toggleSidebar}
-          className="p-4 text-white text-3xl"
+          className="p-4 text-white flex items-center justify-center"
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         >
-          {isOpen ? '×' : '☰'}
+          {isOpen ? (
+            <Image 
+              src="/close.svg" 
+              alt="Cerrar menú" 
+              width={36} 
+              height={36} 
+            />
+          ) : (
+            <Image 
+              src="/menu.svg" 
+              alt="Abrir menú" 
+              width={36} 
+              height={36} 
+            />
+          )}
         </button>
       </div>
 
