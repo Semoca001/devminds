@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Overlay from './Overlay';
+import Overlay from "@/app/components/layout/Overlay";
 import Image from 'next/image';
 
 const Sidebar = () => {
@@ -22,14 +22,14 @@ const Sidebar = () => {
         >
           {isOpen ? (
             <Image 
-              src="/close.svg" 
+              src="/images/close.svg" 
               alt="Cerrar menú" 
               width={36} 
               height={36} 
             />
           ) : (
             <Image 
-              src="/menu.svg" 
+              src="/images/menu.svg" 
               alt="Abrir menú" 
               width={36} 
               height={36} 
@@ -47,14 +47,14 @@ const Sidebar = () => {
         >
           {isOpen ? (
             <Image 
-              src="/close.svg" 
+              src="images/close.svg" 
               alt="Cerrar menú" 
               width={36} 
               height={36} 
             />
           ) : (
             <Image 
-              src="/menu.svg" 
+              src="images/menu.svg" 
               alt="Abrir menú" 
               width={36} 
               height={36} 
