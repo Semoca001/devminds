@@ -1,6 +1,6 @@
 // src/app/components/Overlay.tsx
 'use client';
-import { OverlayAnimation } from "@/app/effects/OverlayAnimation";
+import { OverlayAnimation } from "@/app/components/layout/Overlay/OverlayAnimation";
 
 interface OverlayProps {
   isOpen: boolean;

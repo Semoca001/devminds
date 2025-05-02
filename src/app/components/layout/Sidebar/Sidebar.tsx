@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Overlay from "@/app/components/layout/Overlay";
+import Overlay from "@/app/components/layout/Overlay/Overlay";
 import Image from 'next/image';
 
 const Sidebar = () => {

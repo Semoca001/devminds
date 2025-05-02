@@ -1,6 +1,6 @@
 // src/app/components/Title.tsx
 "use client";
-import { TitleAnimation } from "@/app/effects/TitleAnimation";
+import { TitleAnimation } from "@/app/components/ui/MainTitle/MainTitleAnimation";
 
 const Title = () => (
   <TitleAnimation 
