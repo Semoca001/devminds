@@ -1,4 +1,4 @@
-import Title from "@/app/components/ui/Title";
+import Title from "@/app/components/ui/MainTitle/MainTitle";
 import AboutUs from "@/app/components/sections/Hero";
 
 const Page = () => {
