@@ -2,7 +2,7 @@ import { Roboto, Doto } from "next/font/google"; // Importa Doto
 import type { Metadata } from "next";
 import Sidebar from "./components/layout/Sidebar";
 import Footer from "./components/layout/Footer";
-import "./globals.css";
+import "../styles/globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
