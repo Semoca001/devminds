@@ -44,7 +44,7 @@ export const TitleAnimation = ({
       <motion.h1
         className="text-left font-extrabold break-words mb-10 lg:mb-16"
         style={{
-          fontSize: "clamp(2.75rem, 10vw, 9rem)", // más grande en pantallas grandes
+          fontSize: "clamp(4rem, 15vw, 9rem)", // más grande en pantallas grandes
           lineHeight: "1.2",
           fontFamily: "--font-roboto",
         }}
