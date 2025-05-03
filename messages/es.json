@@ -1,5 +1,7 @@
 {
-    "Hero": {
-      "aboutText": "Texto de ejemplo en español. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut enim dolor. Vestibulum vehicula, nisi a tincidunt dapibus."
-    }
+  "Hero": {
+    "title": "SISTEMAS//OPTIMIZADOS",
+    "subtitle": "ARQUITECTURA DE SOLUCIONES DIGITALES",
+    "aboutText": "DevMinds construye infraestructuras digitales a medida desde principios fundamentales. Diseños modulares. Arquitecturas escalables. Sin complejidad innecesaria. Tecnología que funciona."
   }
+}
