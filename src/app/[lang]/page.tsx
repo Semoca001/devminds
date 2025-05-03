@@ -1,15 +1,22 @@
+// src/app/[lang]/page.tsx
 import Title from "@/app/components/ui/MainTitle/MainTitle";
-import AboutUs from "@/app/components/sections/Hero";
+import Hero from "@/app/components/sections/Hero";
+import Sidebar from "@/app/components/layout/Sidebar/Sidebar";
+import Footer from "@/app/components/layout/Footer/Footer";
 
-const Page = () => {
+export default function Home() {
   return (
-    <div className="px-4 sm:px-6 md:px-8 lg:px-12">
-      <div className="max-w-8xl mx-auto">
-        <Title />
-        <AboutUs />
+    <>
+      <Sidebar />
+      <div className="lg:flex lg:flex-1 lg:ml-20 lg:mt-0 mt-20">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 flex-1">
+          <div className="max-w-8xl mx-auto">
+            <Title />
+            <Hero />
+          </div>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
-};
-
-export default Page;
+}

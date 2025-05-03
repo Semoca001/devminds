@@ -1,46 +1,65 @@
-import { Roboto, Doto } from "next/font/google"; // Importa Doto
+// src/app/[lang]/layout.tsx
+import { Roboto, Doto } from "next/font/google";
 import type { Metadata } from "next";
-import Sidebar from "@/app/components/layout/Sidebar/Sidebar";
-import Footer from "@/app/components/layout/Footer/Footer";
-import "../../styles/globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import "@/styles/globals.css";
 
+
+// Font configurations
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-roboto", // Para usar en Tailwind
-  display: "swap",
+  variable: "--font-roboto",
 });
 
 const doto = Doto({
   subsets: ["latin"],
-  weight: ["100", "400", "700"], // Ajusta según los pesos que necesites
-  variable: "--font-doto", // Para usar en Tailwind
+  weight: ["100", "400", "700"],
+  variable: "--font-doto",
   display: "swap",
 });
+
+// Locales soportados - Movidos a un archivo separado
+import { locales, Locale } from '@/config/i18n-config';
+
+// Definir tipo para los params
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{
+    lang: string;
+  }>;
+};
 
 export const metadata: Metadata = {
   title: "DevMinds",
   description: "Landing page de DevMinds",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout(props: Props) {
+  // Await the params to access lang
+  const { lang } = await props.params;
+
+  // Validate locale - casting to Locale for type checking
+  if (!locales.includes(lang as Locale)) {
+    notFound();
+  }
+
+  // Load messages
+  let messages;
+  try {
+    messages = (await import(`../../../messages/${lang}.json`)).default;
+  } catch {
+    // Using empty catch block without defining an error variable
+    notFound();
+  }
+
   return (
-    <html lang="es" className={`${roboto.variable} ${doto.variable}`}>
+    <html lang={lang} className={`${roboto.variable} ${doto.variable}`}>
       <body className="bg-carbon text-whiteText min-h-screen flex flex-col font-roboto">
-        {/* Sidebar */}
-        <Sidebar />
-
-        {/* Contenido principal con padding adaptado */}
-        <div className="lg:flex lg:flex-1 lg:ml-20 lg:mt-0 mt-20">
-          <main className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10">{children}</main>
-        </div>
-
-        {/* Footer */}
-        <Footer />
+        <NextIntlClientProvider locale={lang} messages={messages}>
+          {props.children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
