@@ -18,7 +18,6 @@ export const TitleAnimation = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
 
-  // Efecto de escritura
   useEffect(() => {
     if (currentIndex < fullText.length) {
       const timeout = setTimeout(() => {
@@ -30,7 +29,6 @@ export const TitleAnimation = ({
     }
   }, [currentIndex, fullText, speed]);
 
-  // Cursor parpadeante
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
@@ -40,13 +38,14 @@ export const TitleAnimation = ({
   }, []);
 
   return (
-    <div className={`max-w-7xl mx-auto px-6 lg:px-12 pt-20 lg:pt-32 ${className}`}>
+    <div className={`w-full mx-auto px-6 lg:px-12 pt-20 lg:pt-32 ${className}`}>
       <motion.h1
-        className="text-left font-extrabold break-words mb-10 lg:mb-16"
+        className="text-left font-extrabold break-all mb-8 lg:mb-12"
         style={{
-          fontSize: "clamp(4rem, 15vw, 9rem)", // más grande en pantallas grandes
-          lineHeight: "1.2",
+          fontSize: "clamp(2.5rem, 11vw, 9rem)", // Aumenté ligeramente el vw para más énfasis
+          lineHeight: "1.1",
           fontFamily: "--font-roboto",
+          wordBreak: "break-word",
         }}
         initial={{ opacity: 1 }}
       >
