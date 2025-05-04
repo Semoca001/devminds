@@ -1,6 +1,5 @@
 // src/app/effects/OverlayAnimation.tsx
 'use client';
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -10,18 +9,13 @@ interface OverlayAnimationProps {
   children?: React.ReactNode;
 }
 
-export const OverlayAnimation = ({ 
-  isOpen, 
-  sidebarWidth = '5rem',
-  children 
-}: OverlayAnimationProps) => {
+export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: OverlayAnimationProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024);
     };
-
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -31,45 +25,13 @@ export const OverlayAnimation = ({
   const overlayVariants = {
     mobile: {
       hidden: { y: '-100%', x: 0 },
-      visible: { 
-        y: 0, 
-        x: 0,
-        transition: { 
-          type: 'tween', 
-          ease: 'easeOut', 
-          duration: 0.3 
-        } 
-      },
-      exit: { 
-        y: '-100%',
-        x: 0,
-        transition: { 
-          type: 'tween', 
-          ease: 'easeIn', 
-          duration: 0.2 
-        } 
-      }
+      visible: { y: 0, x: 0, transition: { type: 'tween', ease: 'easeOut', duration: 0.3 } },
+      exit: { y: '-100%', x: 0, transition: { type: 'tween', ease: 'easeIn', duration: 0.2 } }
     },
     desktop: {
       hidden: { x: '-100%', y: 0 },
-      visible: { 
-        x: 0, 
-        y: 0,
-        transition: { 
-          type: 'tween', 
-          ease: 'easeOut', 
-          duration: 0.3 
-        } 
-      },
-      exit: { 
-        x: '-100%',
-        y: 0,
-        transition: { 
-          type: 'tween', 
-          ease: 'easeIn', 
-          duration: 0.2 
-        } 
-      }
+      visible: { x: 0, y: 0, transition: { type: 'tween', ease: 'easeOut', duration: 0.3 } },
+      exit: { x: '-100%', y: 0, transition: { type: 'tween', ease: 'easeIn', duration: 0.2 } }
     }
   };
 
@@ -77,7 +39,7 @@ export const OverlayAnimation = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bg-[#191919] z-10 border-2 border-white"
+          className="fixed bg-[#191919] z-10 border border-white/20"
           variants={overlayVariants[isMobile ? 'mobile' : 'desktop']}
           initial="hidden"
           animate="visible"

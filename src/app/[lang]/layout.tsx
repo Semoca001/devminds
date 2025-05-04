@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import "@/styles/globals.css";
 
-
 // Font configurations
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,9 +25,7 @@ import { locales, Locale } from '@/config/i18n-config';
 // Definir tipo para los params
 type Props = {
   children: React.ReactNode;
-  params: Promise<{
-    lang: string;
-  }>;
+  params: Promise<{ lang: string; }>;
 };
 
 export const metadata: Metadata = {
