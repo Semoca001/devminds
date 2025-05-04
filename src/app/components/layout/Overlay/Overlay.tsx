@@ -6,14 +6,32 @@ interface OverlayProps {
   isOpen: boolean;
 }
 
-const menuItems = [
-  { id: 1, label: 'PROJECTS', path: '/projects' },
-  { id: 2, label: 'SERVICES', path: '/services' },
-  { id: 3, label: 'ABOUT', path: '/about' },
-  { id: 4, label: 'CONTACT', path: '/contact' }
+interface MenuItem {
+  id: number;
+  label: string;
+  path: string;
+  enabled?: boolean;
+  comingSoon?: boolean;
+}
+
+const menuItems: MenuItem[] = [
+  { id: 1, label: 'PROJECTS', path: '/projects', enabled: false, comingSoon: true },
+  { id: 2, label: 'SERVICES', path: '/services', enabled: false, comingSoon: true },
+  { id: 3, label: 'ABOUT', path: '/about', enabled: false, comingSoon: true },
+  { id: 4, label: 'CONTACT', path: '/contact', enabled: false, comingSoon: true }
 ];
 
 const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
+  const handleItemClick = (item: MenuItem, e: React.MouseEvent) => {
+    if (!item.enabled) {
+      e.preventDefault();
+      // Efecto visual al hacer clic en item deshabilitado
+      const target = e.currentTarget;
+      target.classList.add('animate-pulse');
+      setTimeout(() => target.classList.remove('animate-pulse'), 500);
+    }
+  };
+
   return (
     <OverlayAnimation isOpen={isOpen}>
       <div className="h-full w-full flex flex-col justify-center items-center p-8">
@@ -44,14 +62,28 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
                 }}
               >
                 <a
-                  href={item.path}
-                  className="block group font-mono text-lg sm:text-xl md:text-2xl text-white hover:text-primary-400 transition-colors duration-300"
+                  href={item.enabled ? item.path : '#'}
+                  onClick={(e) => handleItemClick(item, e)}
+                  className={`block group font-mono text-lg sm:text-xl md:text-2xl transition-colors duration-300 relative ${
+                    item.enabled 
+                      ? 'text-white hover:text-primary-400' 
+                      : 'text-gray-500 cursor-not-allowed'
+                  }`}
                 >
                   <span className="text-primary-400 mr-2">$</span>
-                  <span className="group-hover:underline">{item.label}</span>
-                  <span className="ml-2 text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    _
+                  <span className={`group-hover:underline ${!item.enabled && 'line-through'}`}>
+                    {item.label}
                   </span>
+                  {item.comingSoon && (
+                    <span className="absolute right-0 top-0 text-xs text-primary-400 opacity-70">
+                      SOON
+                    </span>
+                  )}
+                  {item.enabled && (
+                    <span className="ml-2 text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      _
+                    </span>
+                  )}
                 </a>
               </motion.li>
             ))}
