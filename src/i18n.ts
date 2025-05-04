@@ -1,9 +1,9 @@
 // src/i18n.ts
 import { getRequestConfig } from 'next-intl/server';
 
-export const defaultLocale = 'en';
-export const locales = ['en', 'es'] as const;
+export const locales = ['es', 'en', 'ja'] as const;
 export type Locale = typeof locales[number];
+export const defaultLocale: Locale = 'es';
 
 export default getRequestConfig(async ({ locale }) => {
   // Ensure locale is one of our supported locales, or use default
