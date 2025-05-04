@@ -29,7 +29,7 @@ const Sidebar = () => {
         </button>
 
         {/* Selector de idioma en la parte inferior */}
-        <div className="absolute bottom-4 w-full flex items-center justify-center">
+        <div className="absolute bottom-4 w-full flex justify-center">
           <LanguageSwitcher direction="vertical" />
         </div>
       </div>
@@ -50,7 +50,7 @@ const Sidebar = () => {
         </button>
 
         {/* Selector de idioma a la derecha */}
-        <div className="p-4 relative">
+        <div className="p-4">
           <LanguageSwitcher direction="horizontal" />
         </div>
       </div>
