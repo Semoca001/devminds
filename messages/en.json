@@ -3,5 +3,12 @@
     "title": "SYSTEMS//<wbr>OPTIMIZED",
     "subtitle": "DIGITAL SOLUTIONS ENGINEERING",
     "aboutText": "DevMinds delivers precision-coded architectures for the post-digital era. Specializing in lean full-stack implementations. No legacy code. No technical debt. Pure computational efficiency."
+  },
+  "Menu": {
+    "projects": "PROJECTS",
+    "services": "SERVICES",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "soon": "SOON"
   }
 }

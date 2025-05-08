@@ -1,6 +1,7 @@
 'use client';
 import { OverlayAnimation } from "@/app/components/layout/Overlay/OverlayAnimation";
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 interface OverlayProps {
   isOpen: boolean;
@@ -8,24 +9,26 @@ interface OverlayProps {
 
 interface MenuItem {
   id: number;
-  label: string;
+  translationKey: string; // Clave para la traducción
   path: string;
   enabled?: boolean;
   comingSoon?: boolean;
 }
 
-const menuItems: MenuItem[] = [
-  { id: 1, label: 'PROJECTS', path: '/projects', enabled: false, comingSoon: true },
-  { id: 2, label: 'SERVICES', path: '/services', enabled: false, comingSoon: true },
-  { id: 3, label: 'ABOUT', path: '/about', enabled: false, comingSoon: true },
-  { id: 4, label: 'CONTACT', path: '/contact', enabled: false, comingSoon: true }
-];
-
 const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
+  const t = useTranslations('Menu');
+  
+  // Definición de los items del menú
+  const menuItems: MenuItem[] = [
+    { id: 1, translationKey: 'projects', path: '/projects', enabled: false, comingSoon: true },
+    { id: 2, translationKey: 'services', path: '/services', enabled: false, comingSoon: true },
+    { id: 3, translationKey: 'about', path: '/about', enabled: false, comingSoon: true },
+    { id: 4, translationKey: 'contact', path: '/contact', enabled: false, comingSoon: true }
+  ];
+
   const handleItemClick = (item: MenuItem, e: React.MouseEvent) => {
     if (!item.enabled) {
       e.preventDefault();
-      // Efecto visual al hacer clic en item deshabilitado
       const target = e.currentTarget;
       target.classList.add('animate-pulse');
       setTimeout(() => target.classList.remove('animate-pulse'), 500);
@@ -72,11 +75,11 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
                 >
                   <span className="text-primary-400 mr-2">$</span>
                   <span className={`group-hover:underline ${!item.enabled && 'line-through'}`}>
-                    {item.label}
+                    {t(item.translationKey)}
                   </span>
                   {item.comingSoon && (
                     <span className="absolute right-0 top-0 text-xs text-primary-400 opacity-70">
-                      SOON
+                      {t('soon')}
                     </span>
                   )}
                   {item.enabled && (
