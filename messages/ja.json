@@ -6,7 +6,7 @@
   },
   "Menu": {
     "projects": "プロジェクト",
-    "services": "プロジェクト",
+    "services": "サービス",
     "about": "私たちについて",
     "contact": "お問い合わせ",
     "soon": "近日公開"
@@ -22,5 +22,84 @@
     "feature2": "クリーンでスケーラブルなコード",
     "feature3": "技術的負債なし",
     "status": "ステータス: デプロイ準備完了"
+  },
+  "AboutUs": {
+    "title": "DevMindsについて",
+    "description": "私たちは最先端のデジタルソリューションの作成を専門とするチームです。クリーンなアーキテクチャ、スケーラブルなコード、そして時代を超えた結果に重点を置いています。",
+    "value1": {
+      "title": "効率性",
+      "description": "最大のパフォーマンスのためにコードの各行を最適化します"
+    },
+    "value2": {
+      "title": "スケーラビリティ",
+      "description": "ビジネスと共に成長するソリューションを構築します"
+    },
+    "value3": {
+      "title": "品質",
+      "description": "技術的負債なし、クリーンで保守可能なコードのみ"
+    },
+    "ctaButton": "私たちについて詳しく"
+  },
+  "Services": {
+    "title": "私たちのサービス",
+    "subtitle": "デジタルアイデアを実現するための包括的な技術ソリューション",
+    "web": {
+      "title": "Web開発",
+      "description": "ランディングページ、企業サイト、モダンなWebアプリケーション"
+    },
+    "software": {
+      "title": "カスタムソフトウェア",
+      "description": "特定の問題を解決するオーダーメイドアプリケーション"
+    },
+    "consulting": {
+      "title": "技術コンサルティング",
+      "description": "コード監査と既存システムの最適化"
+    },
+    "support": {
+      "title": "サポート＆メンテナンス",
+      "description": "技術を最新に保つための継続的なサポート"
+    },
+    "ctaButton": "すべてのサービスを見る"
+  },
+  "Projects": {
+    "title": "注目プロジェクト",
+    "subtitle": "私たちの作品と使用技術の例",
+    "project1": {
+      "title": "モダンEコマース",
+      "description": "完全な在庫管理を備えたオンライン販売プラットフォーム"
+    },
+    "project2": {
+      "title": "管理システム",
+      "description": "ビジネスプロセス制御のための管理ダッシュボード"
+    },
+    "project3": {
+      "title": "ネイティブモバイルアプリ",
+      "description": "リアルタイム同期を備えたクロスプラットフォームアプリケーション"
+    },
+    "ctaButton": "完全なポートフォリオを見る"
+  },
+  "Contact": {
+    "title": "あなたのプロジェクトについて話しましょう",
+    "subtitle": "アイデアはありますか？教えてください。一緒に実現しましょう",
+    "form": {
+      "name": "名前",
+      "namePlaceholder": "フルネーム",
+      "email": "メール",
+      "emailPlaceholder": "your@email.com",
+      "message": "メッセージ",
+      "messagePlaceholder": "プロジェクトについて教えてください...",
+      "submit": "メッセージを送信"
+    },
+    "info": {
+      "responseTime": {
+        "title": "迅速な対応",
+        "description": "24時間以内にすべてのメッセージに返信します"
+      },
+      "email": {
+        "title": "直接連絡",
+        "description": "hello@devminds.com"
+      }
+    },
+    "detailedContact": "その他の連絡オプション"
   }
 }

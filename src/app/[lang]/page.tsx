@@ -1,9 +1,12 @@
-// src/app/[lang]/page.tsx
 'use client';
 
 import Title from "@/app/components/ui/MainTitle/MainTitle";
 import Hero from "@/app/components/sections/Hero";
 import CallToAction from "@/app/components/sections/CallToAction";
+import AboutUs from "@/app/components/sections/AboutUs/AboutUs";
+import Services from "@/app/components/sections/Services/Services";
+import Projects from "@/app/components/sections/Projects/Projects";
+import Contact from "@/app/components/sections/Contact/Contact";
 import Sidebar from "@/app/components/layout/Sidebar/Sidebar";
 import Footer from "@/app/components/layout/Footer/Footer";
 import ScrollIndicator from "@/app/components/ui/ScrollIndicator/ScrollIndicator";
@@ -29,6 +32,10 @@ export default function Home() {
               {/* Contenido que se revela con scroll */}
               <ScrollRevealWrapper isVisible={hasScrolled} delay={0.2}>
                 <CallToAction />
+                <AboutUs />
+                <Services />
+                <Projects />
+                <Contact />
               </ScrollRevealWrapper>
             </div>
           </div>

@@ -22,5 +22,84 @@
     "feature2": "Clean and scalable code",
     "feature3": "Zero technical debt",
     "status": "Status: Ready for deployment"
+  },
+  "AboutUs": {
+    "title": "About DevMinds",
+    "description": "We are a team specialized in creating cutting-edge digital solutions. We focus on clean architectures, scalable code and results that stand the test of time.",
+    "value1": {
+      "title": "Efficiency",
+      "description": "We optimize every line of code for maximum performance"
+    },
+    "value2": {
+      "title": "Scalability",
+      "description": "We build solutions that grow with your business"
+    },
+    "value3": {
+      "title": "Quality",
+      "description": "No technical debt, just clean and maintainable code"
+    },
+    "ctaButton": "Learn more about us"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive technology solutions to bring your digital ideas to life",
+    "web": {
+      "title": "Web Development",
+      "description": "Landing pages, corporate sites and modern web applications"
+    },
+    "software": {
+      "title": "Custom Software",
+      "description": "Tailor-made applications that solve specific problems"
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Code audits and optimization of existing systems"
+    },
+    "support": {
+      "title": "Support & Maintenance",
+      "description": "Continuous support to keep your technology up to date"
+    },
+    "ctaButton": "View all services"
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some examples of our work and the technologies we use",
+    "project1": {
+      "title": "Modern E-commerce",
+      "description": "Online sales platform with complete inventory management"
+    },
+    "project2": {
+      "title": "Management System",
+      "description": "Administrative dashboard for business process control"
+    },
+    "project3": {
+      "title": "Native Mobile App",
+      "description": "Cross-platform application with real-time synchronization"
+    },
+    "ctaButton": "View complete portfolio"
+  },
+  "Contact": {
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Have an idea? Tell us and let's work together to make it happen",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send message"
+    },
+    "info": {
+      "responseTime": {
+        "title": "Quick Response",
+        "description": "We respond to all messages in less than 24 hours"
+      },
+      "email": {
+        "title": "Direct Contact",
+        "description": "hello@devminds.com"
+      }
+    },
+    "detailedContact": "More contact options"
   }
 }
