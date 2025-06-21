@@ -45,7 +45,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ direction = 'vertic
       {/* Botón de idioma */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center text-white p-2 focus:outline-none"
+        className="flex items-center justify-center text-text-primary hover:text-primary transition-colors duration-300 p-2 focus:outline-none"
         aria-label="Cambiar idioma"
       >
         <Image

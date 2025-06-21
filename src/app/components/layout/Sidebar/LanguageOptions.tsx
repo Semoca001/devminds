@@ -39,7 +39,7 @@ const LanguageOptions: React.FC<LanguageOptionsProps> = ({
           variants={containerVariants[direction]}
           transition={{ duration: 0.2 }}
           className={`
-            z-30 
+            z-40 
             ${direction === 'vertical' 
               ? 'absolute bottom-full left-0 right-0 mb-2 flex justify-center' 
               : 'absolute right-full top-0 bottom-0 mr-2 flex items-center'
@@ -47,7 +47,7 @@ const LanguageOptions: React.FC<LanguageOptionsProps> = ({
           `}
         >
           <ul className={`
-            bg-[#191919] rounded-lg p-1
+            bg-dark-gray border border-border-primary rounded-lg p-1
             ${direction === 'vertical' 
               ? 'flex flex-col items-center space-y-1' 
               : 'flex space-x-1'
@@ -57,10 +57,10 @@ const LanguageOptions: React.FC<LanguageOptionsProps> = ({
               <li key={locale}>
                 <button
                   onClick={() => handleLanguageChange(locale)}
-                  className={`px-3 py-1 text-sm rounded transition-colors ${
+                  className={`px-3 py-1 text-sm rounded transition-colors duration-300 ${
                     currentLocale === locale 
-                      ? 'bg-white text-[#191919]' 
-                      : 'text-white hover:bg-white/10'
+                      ? 'bg-primary text-black' 
+                      : 'text-text-primary hover:bg-border-primary'
                   }`}
                 >
                   {locale.toUpperCase()}

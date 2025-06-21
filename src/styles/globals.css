@@ -1,9 +1,71 @@
-/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/* Base styles */
 body {
-  @apply bg-carbon text-whiteText font-roboto; /* Fondo y texto global */
+  @apply bg-carbon text-text-primary font-roboto antialiased;
+}
+
+/* Component utilities */
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-white text-black font-medium transition-all duration-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-carbon;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-primary text-primary font-medium transition-all duration-300 hover:bg-primary hover:text-black focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-carbon;
+  }
+  
+  .btn-ghost {
+    @apply px-4 py-2 text-text-secondary font-medium transition-colors duration-300 hover:text-text-primary focus:outline-none focus:text-text-primary;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-dark-gray border border-border-primary rounded-lg p-6;
+  }
+  
+  .card-simple {
+    @apply bg-dark-gray border border-border-secondary rounded p-4;
+  }
+  
+  /* Typography utilities */
+  .title-hero {
+    @apply font-roboto font-bold text-title-hero text-text-primary;
+  }
+  
+  .title-section {
+    @apply font-roboto font-bold text-title-section text-text-primary;
+  }
+  
+  .title-sub {
+    @apply font-roboto font-semibold text-title-sub text-text-primary;
+  }
+  
+  .title-decorative {
+    @apply font-doto font-bold text-text-primary;
+  }
+  
+  .text-body {
+    @apply font-roboto text-base text-text-secondary leading-relaxed;
+  }
+  
+  .text-small {
+    @apply font-roboto text-sm text-text-tertiary;
+  }
+  
+  .text-code {
+    @apply font-mono text-sm text-primary;
+  }
+  
+  /* Layout utilities */
+  .container-main {
+    @apply w-full mx-auto px-6 lg:px-12;
+  }
+  
+  .section-spacing {
+    @apply py-12 md:py-16 lg:py-20;
+  }
 }
