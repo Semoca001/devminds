@@ -38,15 +38,9 @@ export const TitleAnimation = ({
   }, []);
 
   return (
-    <div className={`w-full mx-auto px-6 lg:px-12 pt-20 lg:pt-32 ${className}`}>
+    <div className={`container-main pt-20 lg:pt-32 ${className}`}>
       <motion.h1
-        className="text-left font-extrabold break-all mb-8 lg:mb-12"
-        style={{
-          fontSize: "clamp(2.5rem, 11vw, 9rem)", // Aumenté ligeramente el vw para más énfasis
-          lineHeight: "1.1",
-          fontFamily: "--font-roboto",
-          wordBreak: "break-word",
-        }}
+        className="title-hero text-left break-all mb-8 lg:mb-12"
         initial={{ opacity: 1 }}
       >
         {displayText.split("").map((char, i) => (
@@ -67,6 +61,7 @@ export const TitleAnimation = ({
         <motion.span
           animate={{ opacity: showCursor ? 1 : 0 }}
           transition={{ duration: 0.1 }}
+          className="text-primary"
         >
           _
         </motion.span>

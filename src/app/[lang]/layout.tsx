@@ -8,8 +8,9 @@ import "@/styles/globals.css";
 // Font configurations
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   variable: "--font-roboto",
+  display: "swap",
 });
 
 const doto = Doto({
@@ -19,7 +20,7 @@ const doto = Doto({
   display: "swap",
 });
 
-// Locales soportados - Movidos a un archivo separado
+// Locales soportados
 import { locales, Locale } from '@/config/i18n-config';
 
 // Definir tipo para los params
@@ -29,8 +30,8 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: "DevMinds",
-  description: "Landing page de DevMinds",
+  title: "DevMinds - Digital Solutions Engineering",
+  description: "DevMinds delivers precision-coded architectures for the post-digital era. Specializing in lean full-stack implementations.",
 };
 
 export default async function RootLayout(props: Props) {
@@ -47,13 +48,12 @@ export default async function RootLayout(props: Props) {
   try {
     messages = (await import(`../../../messages/${lang}.json`)).default;
   } catch {
-    // Using empty catch block without defining an error variable
     notFound();
   }
 
   return (
     <html lang={lang} className={`${roboto.variable} ${doto.variable}`}>
-      <body className="bg-carbon text-whiteText min-h-screen flex flex-col font-roboto">
+      <body className="bg-carbon text-text-primary min-h-screen flex flex-col font-roboto antialiased">
         <NextIntlClientProvider locale={lang} messages={messages}>
           {props.children}
         </NextIntlClientProvider>
