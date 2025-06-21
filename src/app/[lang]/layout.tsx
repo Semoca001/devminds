@@ -1,8 +1,9 @@
-// src/app/[lang]/layout.tsx - Versión mejorada con SEO
+// src/app/[lang]/layout.tsx - Versión mejorada con SEO y Temas
 import { Roboto, Doto } from "next/font/google";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import ClientThemeWrapper from "@/app/components/ClientThemeWrapper";
 import "@/styles/globals.css";
 
 // Font configurations
@@ -35,18 +36,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const metadata = {
     es: {
       title: "DevMinds - Desarrollo Web y Software Personalizado",
-      description: "Creamos soluciones digitales eficientes. Desarrollo web, software personalizado y consultoría técnica. Sin deuda técnica, solo código limpio y escalable.",
-      keywords: "desarrollo web, software personalizado, Next.js, React, consultoría técnica, desarrollo colombia"
+      description: "Creamos soluciones digitales eficientes y profesionales. Desarrollo web, software personalizado y consultoría técnica. Código limpio y escalable para empresas.",
+      keywords: "desarrollo web, software personalizado, Next.js, React, consultoría técnica, desarrollo colombia, soluciones empresariales"
     },
     en: {
-      title: "DevMinds - Web Development & Custom Software",
-      description: "We create efficient digital solutions. Web development, custom software and technical consulting. No technical debt, just clean and scalable code.",
-      keywords: "web development, custom software, Next.js, React, technical consulting, development colombia"
+      title: "DevMinds - Professional Web Development & Custom Software",
+      description: "We create efficient and professional digital solutions. Web development, custom software and technical consulting. Clean and scalable code for businesses.",
+      keywords: "web development, custom software, Next.js, React, technical consulting, development colombia, business solutions"
     },
     ja: {
-      title: "DevMinds - ウェブ開発とカスタムソフトウェア",
-      description: "効率的なデジタルソリューションを作成します。ウェブ開発、カスタムソフトウェア、技術コンサルティング。技術的負債なし。",
-      keywords: "ウェブ開発, カスタムソフトウェア, Next.js, React, 技術コンサルティング"
+      title: "DevMinds - プロフェッショナルウェブ開発とカスタムソフトウェア",
+      description: "効率的でプロフェッショナルなデジタルソリューションを作成します。ウェブ開発、カスタムソフトウェア、技術コンサルティング。",
+      keywords: "ウェブ開発, カスタムソフトウェア, Next.js, React, 技術コンサルティング, ビジネスソリューション"
     }
   };
 
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: 'https://devminds.online/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'DevMinds - Soluciones Digitales',
+          alt: 'DevMinds - Soluciones Digitales Profesionales',
         }
       ],
     },
@@ -115,7 +116,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     
     // Metadatos adicionales
     category: 'technology',
-    classification: 'Web Development Services',
+    classification: 'Professional Web Development Services',
     
     // Para aplicaciones web progresivas (PWA)
     manifest: '/manifest.json',
@@ -166,7 +167,7 @@ export default async function RootLayout(props: Props) {
               "@type": "Organization",
               "name": "DevMinds",
               "url": "https://devminds.online",
-              "description": "Creamos soluciones digitales eficientes sin complejidad innecesaria",
+              "description": "Creamos soluciones digitales profesionales y eficientes para empresas",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "hello@devminds.com",
@@ -178,16 +179,18 @@ export default async function RootLayout(props: Props) {
               },
               "offers": {
                 "@type": "Service",
-                "serviceType": "Web Development and Custom Software"
+                "serviceType": "Professional Web Development and Custom Software"
               }
             })
           }}
         />
       </head>
-      <body className="bg-carbon text-text-primary min-h-screen flex flex-col font-roboto antialiased">
-        <NextIntlClientProvider locale={lang} messages={messages}>
-          {props.children}
-        </NextIntlClientProvider>
+      <body className="min-h-screen flex flex-col font-roboto antialiased">
+        <ClientThemeWrapper>
+          <NextIntlClientProvider locale={lang} messages={messages}>
+            {props.children}
+          </NextIntlClientProvider>
+        </ClientThemeWrapper>
       </body>
     </html>
   );

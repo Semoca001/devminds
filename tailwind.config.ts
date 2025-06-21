@@ -5,25 +5,37 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        // Backgrounds
+        // Backgrounds - Dark Theme
         carbon: '#0a0a0a',
         'dark-gray': '#191919',
         
-        // Primary Brand
+        // Backgrounds - Light Theme
+        snow: '#fffafa',
+        ivory: '#fffff0',
+        'alice-blue': '#f0f8ff',
+        'ghost-white': '#f8f8ff',
+        'light-gray': '#f5f5f5',
+        'light-border': '#e5e5e5',
+        
+        // Primary Brand (same for both themes)
         primary: {
           DEFAULT: '#00ff88',
           light: '#33ff99',
           dark: '#00cc6a',
         },
         
-        // Text Colors
+        // Text Colors - adaptable
         text: {
-          primary: '#ffffff',
-          secondary: '#a3a3a3',
-          tertiary: '#525252',
+          primary: '#ffffff', // dark theme
+          secondary: '#a3a3a3', // dark theme
+          tertiary: '#525252', // dark theme
+          'primary-light': '#1a1a1a', // light theme
+          'secondary-light': '#4a5568', // light theme
+          'tertiary-light': '#718096', // light theme
         },
         
         // Status Colors
@@ -32,10 +44,12 @@ module.exports = {
         error: '#ef4444',
         info: '#3b82f6',
         
-        // Border Colors
+        // Border Colors - adaptable
         border: {
-          primary: 'rgba(255, 255, 255, 0.2)',
-          secondary: 'rgba(255, 255, 255, 0.1)',
+          primary: 'rgba(255, 255, 255, 0.2)', // dark theme
+          secondary: 'rgba(255, 255, 255, 0.1)', // dark theme
+          'primary-light': 'rgba(0, 0, 0, 0.1)', // light theme
+          'secondary-light': 'rgba(0, 0, 0, 0.05)', // light theme
         },
       },
       fontFamily: {

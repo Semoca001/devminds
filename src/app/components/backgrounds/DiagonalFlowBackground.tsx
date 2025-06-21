@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
 interface DiagonalFlowBackgroundProps {
   children: ReactNode;
@@ -9,13 +10,51 @@ interface DiagonalFlowBackgroundProps {
 }
 
 const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgroundProps) => {
+  const [mounted, setMounted] = useState(false);
+  
+  // Solo usar el hook después de que el componente esté montado
+  let theme = 'dark';
+  
+  try {
+    const themeContext = useTheme();
+    theme = themeContext.theme;
+  } catch {
+    // Si falla, usar tema oscuro por defecto hasta que se monte el provider
+    theme = 'dark';
+  }
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const darkThemeStyles = {
+    // Líneas horizontales oscuras
+    horizontal: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255, 255, 255, 0.08) 49px, rgba(255, 255, 255, 0.08) 50px)',
+    // Líneas verticales oscuras  
+    vertical: 'repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255, 255, 255, 0.08) 49px, rgba(255, 255, 255, 0.08) 50px)',
+    // Degradado diagonal oscuro
+    diagonal: 'linear-gradient(135deg, transparent 25%, rgba(0, 255, 136, 0.1) 50%, transparent 75%)'
+  };
+
+  const lightThemeStyles = {
+    // Líneas horizontales claras
+    horizontal: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(0, 0, 0, 0.05) 49px, rgba(0, 0, 0, 0.05) 50px)',
+    // Líneas verticales claras
+    vertical: 'repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(0, 0, 0, 0.05) 49px, rgba(0, 0, 0, 0.05) 50px)',
+    // Degradado diagonal claro
+    diagonal: 'linear-gradient(135deg, transparent 25%, rgba(0, 255, 136, 0.08) 50%, transparent 75%)'
+  };
+
+  // Usar tema oscuro por defecto hasta que se monte, luego usar el tema actual
+  const currentStyles = (mounted && theme === 'light') ? lightThemeStyles : darkThemeStyles;
+
   return (
     <div className={`relative ${className}`}>
       {/* Capa 1: Líneas horizontales */}
       <motion.div
         className="absolute inset-0 opacity-8"
         style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255, 255, 255, 0.08) 49px, rgba(255, 255, 255, 0.08) 50px)',
+          backgroundImage: currentStyles.horizontal,
         }}
       />
       
@@ -23,7 +62,7 @@ const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgr
       <motion.div
         className="absolute inset-0 opacity-8"
         style={{
-          backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255, 255, 255, 0.08) 49px, rgba(255, 255, 255, 0.08) 50px)',
+          backgroundImage: currentStyles.vertical,
         }}
       />
       
@@ -31,7 +70,7 @@ const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgr
       <motion.div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'linear-gradient(135deg, transparent 25%, rgba(0, 255, 136, 0.1) 50%, transparent 75%)',
+          backgroundImage: currentStyles.diagonal,
           backgroundSize: '400% 400%',
         }}
         animate={{
