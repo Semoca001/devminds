@@ -22,5 +22,84 @@
     "feature2": "Código limpio y escalable",
     "feature3": "Sin deuda técnica",
     "status": "Status: Ready for deployment"
+  },
+  "AboutUs": {
+    "title": "Sobre DevMinds",
+    "description": "Somos un equipo especializado en crear soluciones digitales de última generación. Nos enfocamos en arquitecturas limpias, código escalable y resultados que perduran en el tiempo.",
+    "value1": {
+      "title": "Eficiencia",
+      "description": "Optimizamos cada línea de código para máximo rendimiento"
+    },
+    "value2": {
+      "title": "Escalabilidad",
+      "description": "Construimos soluciones que crecen con tu negocio"
+    },
+    "value3": {
+      "title": "Calidad",
+      "description": "Sin deuda técnica, solo código limpio y mantenible"
+    },
+    "ctaButton": "Conoce más sobre nosotros"
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones tecnológicas integrales para hacer realidad tus ideas digitales",
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Landing pages, sitios corporativos y aplicaciones web modernas"
+    },
+    "software": {
+      "title": "Software Personalizado",
+      "description": "Aplicaciones a medida que resuelven problemas específicos"
+    },
+    "consulting": {
+      "title": "Consultoría Técnica",
+      "description": "Auditorías de código y optimización de sistemas existentes"
+    },
+    "support": {
+      "title": "Soporte & Mantenimiento",
+      "description": "Acompañamiento continuo para mantener tu tecnología actualizada"
+    },
+    "ctaButton": "Ver todos los servicios"
+  },
+  "Projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Algunos ejemplos de nuestro trabajo y las tecnologías que utilizamos",
+    "project1": {
+      "title": "E-commerce Moderno",
+      "description": "Plataforma de ventas online con gestión completa de inventario"
+    },
+    "project2": {
+      "title": "Sistema de Gestión",
+      "description": "Dashboard administrativo para control de procesos empresariales"
+    },
+    "project3": {
+      "title": "App Móvil Nativa",
+      "description": "Aplicación multiplataforma con sincronización en tiempo real"
+    },
+    "ctaButton": "Ver portfolio completo"
+  },
+  "Contact": {
+    "title": "Hablemos de tu Proyecto",
+    "subtitle": "¿Tienes una idea? Cuéntanos y trabajemos juntos para hacerla realidad",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar mensaje"
+    },
+    "info": {
+      "responseTime": {
+        "title": "Respuesta Rápida",
+        "description": "Respondemos todos los mensajes en menos de 24 horas"
+      },
+      "email": {
+        "title": "Contacto Directo",
+        "description": "hello@devminds.com"
+      }
+    },
+    "detailedContact": "Más opciones de contacto"
   }
 }
