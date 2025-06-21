@@ -11,7 +11,8 @@ import Sidebar from "@/app/components/layout/Sidebar/Sidebar";
 import Footer from "@/app/components/layout/Footer/Footer";
 import ScrollIndicator from "@/app/components/ui/ScrollIndicator/ScrollIndicator";
 import ScrollRevealWrapper from "@/app/components/ui/ScrollReveal/ScrollRevealWrapper";
-import { DiagonalFlowBackground } from "@/app/components/backgrounds";
+// Importar el fondo adaptativo
+import { AdaptiveBackground } from "@/app/components/backgrounds";
 import { useScrollReveal } from "@/app/hooks/useScrollReveal";
 
 export default function Home() {
@@ -21,8 +22,8 @@ export default function Home() {
     <div className="bg-main text-main min-h-screen flex flex-col">
       <Sidebar />
       <div className="lg:flex lg:flex-1 lg:ml-20 lg:mt-0 mt-20">
-        {/* Contenido principal con fondo animado y z-index bajo */}
-        <DiagonalFlowBackground className="flex-1 relative z-10">
+        {/* Contenido principal con fondo adaptativo */}
+        <AdaptiveBackground className="flex-1 relative z-10">
           <div className="px-4 sm:px-6 md:px-8 lg:px-12">
             <div className="max-w-8xl mx-auto">
               {/* Contenido siempre visible */}
@@ -39,7 +40,7 @@ export default function Home() {
               </ScrollRevealWrapper>
             </div>
           </div>
-        </DiagonalFlowBackground>
+        </AdaptiveBackground>
       </div>
       
       {/* Indicador de scroll - solo se muestra si no has scrolleado */}

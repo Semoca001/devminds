@@ -69,7 +69,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bg-dark-gray z-[9999] border border-border-primary"
+          className="fixed bg-secondary z-[9999] border border-sidebar shadow-lg"
           variants={overlayVariants[isMobile ? 'mobile' : 'desktop']}
           initial="hidden"
           animate="visible"

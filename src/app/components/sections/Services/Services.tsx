@@ -25,10 +25,10 @@ const Services = () => {
           </p>
         </div>
         
-        {/* Grid de servicios */}
+        {/* Grid de servicios con glassmorphism */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {services.map((service) => (
-            <div key={service.key} className="card text-center hover:border-primary transition-colors duration-300">
+            <div key={service.key} className="card-glass text-center hover:bg-white/60 dark:hover:bg-dark-gray/80 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="title-sub mb-3">
                 {t(`${service.key}.title`)}

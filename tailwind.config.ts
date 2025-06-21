@@ -26,6 +26,7 @@ module.exports = {
           DEFAULT: '#00ff88',
           light: '#33ff99',
           dark: '#00cc6a',
+          'dark-contrast': '#00a855', // Verde más oscuro para modo claro
         },
         
         // Text Colors - adaptable
@@ -33,9 +34,9 @@ module.exports = {
           primary: '#ffffff', // dark theme
           secondary: '#a3a3a3', // dark theme
           tertiary: '#525252', // dark theme
-          'primary-light': '#1a1a1a', // light theme
-          'secondary-light': '#4a5568', // light theme
-          'tertiary-light': '#718096', // light theme
+          'primary-light': '#111827', // light theme - negro más intenso
+          'secondary-light': '#374151', // light theme - gris más oscuro
+          'tertiary-light': '#6b7280', // light theme - gris medio más oscuro
         },
         
         // Status Colors
@@ -48,8 +49,8 @@ module.exports = {
         border: {
           primary: 'rgba(255, 255, 255, 0.2)', // dark theme
           secondary: 'rgba(255, 255, 255, 0.1)', // dark theme
-          'primary-light': 'rgba(0, 0, 0, 0.1)', // light theme
-          'secondary-light': 'rgba(0, 0, 0, 0.05)', // light theme
+          'primary-light': 'rgba(0, 0, 0, 0.12)', // light theme - sutil
+          'secondary-light': 'rgba(0, 0, 0, 0.08)', // light theme - muy sutil
         },
       },
       fontFamily: {

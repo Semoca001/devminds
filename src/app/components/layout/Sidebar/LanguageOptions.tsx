@@ -47,7 +47,7 @@ const LanguageOptions: React.FC<LanguageOptionsProps> = ({
           `}
         >
           <ul className={`
-            bg-dark-gray border border-border-primary rounded-lg p-1
+            bg-secondary border-2 border-sidebar rounded-lg p-1 shadow-lg
             ${direction === 'vertical' 
               ? 'flex flex-col items-center space-y-1' 
               : 'flex space-x-1'
@@ -59,8 +59,8 @@ const LanguageOptions: React.FC<LanguageOptionsProps> = ({
                   onClick={() => handleLanguageChange(locale)}
                   className={`px-3 py-1 text-sm rounded transition-colors duration-300 ${
                     currentLocale === locale 
-                      ? 'bg-primary text-black' 
-                      : 'text-text-primary hover:bg-border-primary'
+                      ? 'bg-primary text-black font-medium' 
+                      : 'text-main hover:bg-primary hover:text-black'
                   }`}
                 >
                   {locale.toUpperCase()}

@@ -17,6 +17,7 @@ export const TitleAnimation = ({
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -26,16 +27,25 @@ export const TitleAnimation = ({
       }, speed);
 
       return () => clearTimeout(timeout);
+    } else {
+      // Marcar que la escritura está completa
+      setIsTypingComplete(true);
     }
   }, [currentIndex, fullText, speed]);
 
   useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
+    // Solo hacer el cursor destelle después de completar la escritura
+    if (isTypingComplete) {
+      const cursorInterval = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 500);
 
-    return () => clearInterval(cursorInterval);
-  }, []);
+      return () => clearInterval(cursorInterval);
+    } else {
+      // Mientras escribe, mantener el cursor visible
+      setShowCursor(true);
+    }
+  }, [isTypingComplete]);
 
   return (
     <div className={`container-main pt-20 lg:pt-32 ${className}`}>

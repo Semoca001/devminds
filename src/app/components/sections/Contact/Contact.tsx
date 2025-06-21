@@ -19,38 +19,38 @@ const Contact = () => {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Formulario */}
-          <div className="card">
+          {/* Formulario con glassmorphism */}
+          <div className="card-glass">
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.name')}
                 </label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white/50 dark:bg-main backdrop-blur-sm border border-white/30 dark:border-border-primary rounded focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-main"
                   placeholder={t('form.namePlaceholder')}
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.email')}
                 </label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white/50 dark:bg-main backdrop-blur-sm border border-white/30 dark:border-border-primary rounded focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-main"
                   placeholder={t('form.emailPlaceholder')}
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.message')}
                 </label>
                 <textarea 
                   rows={5}
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/50 dark:bg-main backdrop-blur-sm border border-white/30 dark:border-border-primary rounded focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none text-main"
                   placeholder={t('form.messagePlaceholder')}
                 ></textarea>
               </div>
@@ -63,7 +63,7 @@ const Contact = () => {
           
           {/* Info de contacto */}
           <div className="space-y-6">
-            <div className="card-simple">
+            <div className="card-soft hover:bg-white/80 dark:hover:bg-dark-gray/80 transition-all duration-300">
               <h3 className="title-sub mb-3 text-primary">
                 {t('info.responseTime.title')}
               </h3>
@@ -72,7 +72,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="card-simple">
+            <div className="card-soft hover:bg-white/80 dark:hover:bg-dark-gray/80 transition-all duration-300">
               <h3 className="title-sub mb-3 text-primary">
                 {t('info.email.title')}
               </h3>

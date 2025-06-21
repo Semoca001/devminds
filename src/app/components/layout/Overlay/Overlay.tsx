@@ -52,8 +52,8 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
                   onClick={(e) => handleItemClick(item, e)}
                   className={`block title-sub transition-colors duration-300 text-center ${
                     item.enabled 
-                      ? 'text-text-primary hover:text-primary' 
-                      : 'text-text-tertiary cursor-not-allowed'
+                      ? 'text-main hover:text-primary' 
+                      : 'text-tertiary cursor-not-allowed'
                   }`}
                 >
                   {t(item.translationKey)}
@@ -70,7 +70,7 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen }) => {
 
         {/* Footer */}
         <div className="mt-16 text-center">
-          <p className="text-small">© 2025 DevMinds</p>
+          <p className="text-small text-secondary">© 2025 DevMinds</p>
         </div>
       </div>
     </OverlayAnimation>
