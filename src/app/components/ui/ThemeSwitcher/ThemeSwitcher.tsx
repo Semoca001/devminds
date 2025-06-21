@@ -20,7 +20,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ className = '' }) => {
     const themeContext = useTheme();
     theme = themeContext.theme;
     toggleTheme = themeContext.toggleTheme;
-  } catch (error) {
+  } catch {
     // Si falla, usar valores por defecto hasta que se monte el provider
   }
 

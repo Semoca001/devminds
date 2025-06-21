@@ -18,7 +18,7 @@ const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgr
   try {
     const themeContext = useTheme();
     theme = themeContext.theme;
-  } catch (error) {
+  } catch {
     // Si falla, usar tema oscuro por defecto hasta que se monte el provider
     theme = 'dark';
   }
