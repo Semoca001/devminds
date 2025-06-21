@@ -2,58 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
-body {
+/* Base styles for dark theme */
+.dark body {
   @apply bg-carbon text-text-primary font-roboto antialiased;
+}
+
+/* Base styles for light theme */
+.light body {
+  @apply bg-snow text-text-primary-light font-roboto antialiased;
 }
 
 /* Component utilities */
 @layer components {
-  /* Button styles */
-  .btn-primary {
+  /* Button styles - Dark theme */
+  .dark .btn-primary {
     @apply px-6 py-3 bg-white text-black font-medium transition-all duration-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-carbon;
   }
   
-  .btn-secondary {
+  .dark .btn-secondary {
     @apply px-6 py-3 border-2 border-primary text-primary font-medium transition-all duration-300 hover:bg-primary hover:text-black focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-carbon;
   }
   
-  .btn-ghost {
+  .dark .btn-ghost {
     @apply px-4 py-2 text-text-secondary font-medium transition-colors duration-300 hover:text-text-primary focus:outline-none focus:text-text-primary;
   }
+
+  /* Button styles - Light theme */
+  .light .btn-primary {
+    @apply px-6 py-3 bg-primary text-black font-medium transition-all duration-300 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-snow;
+  }
   
-  /* Card styles */
-  .card {
+  .light .btn-secondary {
+    @apply px-6 py-3 border-2 border-primary text-primary font-medium transition-all duration-300 hover:bg-primary hover:text-black focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-snow;
+  }
+  
+  .light .btn-ghost {
+    @apply px-4 py-2 text-text-secondary-light font-medium transition-colors duration-300 hover:text-text-primary-light focus:outline-none focus:text-text-primary-light;
+  }
+  
+  /* Card styles - Dark theme */
+  .dark .card {
     @apply bg-dark-gray border border-border-primary rounded-lg p-6;
   }
   
-  .card-simple {
+  .dark .card-simple {
     @apply bg-dark-gray border border-border-secondary rounded p-4;
   }
+
+  /* Card styles - Light theme */
+  .light .card {
+    @apply bg-white border border-border-primary-light rounded-lg p-6 shadow-sm;
+  }
   
-  /* Typography utilities */
-  .title-hero {
+  .light .card-simple {
+    @apply bg-alice-blue border border-border-secondary-light rounded p-4;
+  }
+  
+  /* Typography utilities - Dark theme */
+  .dark .title-hero {
     @apply font-roboto font-bold text-title-hero text-text-primary;
   }
   
-  .title-section {
+  .dark .title-section {
     @apply font-roboto font-bold text-title-section text-text-primary;
   }
   
-  .title-sub {
+  .dark .title-sub {
     @apply font-roboto font-semibold text-title-sub text-text-primary;
   }
   
-  .title-decorative {
-    @apply font-doto font-bold text-text-primary;
-  }
-  
-  .text-body {
+  .dark .text-body {
     @apply font-roboto text-base text-text-secondary leading-relaxed;
   }
   
-  .text-small {
+  .dark .text-small {
     @apply font-roboto text-sm text-text-tertiary;
+  }
+
+  /* Typography utilities - Light theme */
+  .light .title-hero {
+    @apply font-roboto font-bold text-title-hero text-text-primary-light;
+  }
+  
+  .light .title-section {
+    @apply font-roboto font-bold text-title-section text-text-primary-light;
+  }
+  
+  .light .title-sub {
+    @apply font-roboto font-semibold text-title-sub text-text-primary-light;
+  }
+  
+  .light .text-body {
+    @apply font-roboto text-base text-text-secondary-light leading-relaxed;
+  }
+  
+  .light .text-small {
+    @apply font-roboto text-sm text-text-tertiary-light;
+  }
+
+  /* Common styles */
+  .title-decorative {
+    @apply font-doto font-bold;
   }
   
   .text-code {
@@ -67,5 +116,54 @@ body {
   
   .section-spacing {
     @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Background utilities */
+  .bg-main {
+    @apply bg-carbon;
+  }
+  
+  .light .bg-main {
+    @apply bg-snow;
+  }
+
+  .bg-secondary {
+    @apply bg-dark-gray;
+  }
+  
+  .light .bg-secondary {
+    @apply bg-white;
+  }
+
+  .border-main {
+    @apply border-border-primary;
+  }
+  
+  .light .border-main {
+    @apply border-border-primary-light;
+  }
+
+  .text-main {
+    @apply text-text-primary;
+  }
+  
+  .light .text-main {
+    @apply text-text-primary-light;
+  }
+
+  .text-secondary {
+    @apply text-text-secondary;
+  }
+  
+  .light .text-secondary {
+    @apply text-text-secondary-light;
+  }
+
+  .text-tertiary {
+    @apply text-text-tertiary;
+  }
+  
+  .light .text-tertiary {
+    @apply text-text-tertiary-light;
   }
 }

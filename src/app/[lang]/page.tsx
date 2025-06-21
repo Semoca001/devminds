@@ -18,7 +18,7 @@ export default function Home() {
   const { hasScrolled } = useScrollReveal(200);
 
   return (
-    <>
+    <div className="bg-main text-main min-h-screen flex flex-col">
       <Sidebar />
       <div className="lg:flex lg:flex-1 lg:ml-20 lg:mt-0 mt-20">
         {/* Contenido principal con fondo animado y z-index bajo */}
@@ -46,6 +46,6 @@ export default function Home() {
       <ScrollIndicator show={!hasScrolled} />
       
       <Footer />
-    </>
+    </div>
   );
 }
