@@ -29,7 +29,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
         transition: { 
           type: 'tween', 
           ease: 'easeOut', 
-          duration: 0.3 
+          duration: 0.5 
         } 
       },
       exit: { 
@@ -38,7 +38,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
         transition: { 
           type: 'tween', 
           ease: 'easeIn', 
-          duration: 0.2 
+          duration: 0.3 
         } 
       }
     },
@@ -50,7 +50,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
         transition: { 
           type: 'tween', 
           ease: 'easeOut', 
-          duration: 0.3 
+          duration: 0.5 
         } 
       },
       exit: { 
@@ -59,7 +59,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
         transition: { 
           type: 'tween', 
           ease: 'easeIn', 
-          duration: 0.2 
+          duration: 0.3 
         } 
       }
     }
@@ -75,10 +75,10 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
           animate="visible"
           exit="exit"
           style={{
-            top: 0,
-            left: isMobile ? 0 : sidebarWidth,
+            top: isMobile ? '5rem' : 0, // En mobile empieza después del sidebar horizontal
+            left: isMobile ? 0 : sidebarWidth, // En desktop empieza después del sidebar vertical
             width: isMobile ? '100%' : `calc(100% - ${sidebarWidth})`,
-            height: isMobile ? '100vh' : '100%',
+            height: isMobile ? 'calc(100vh - 5rem)' : '100vh', // En mobile resta la altura del sidebar
           }}
         >
           {children}

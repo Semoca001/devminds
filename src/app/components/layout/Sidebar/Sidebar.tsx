@@ -35,7 +35,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar horizontal para pantallas menores a 1024px */}
-      <div className="lg:hidden fixed top-0 left-0 w-full bg-dark-gray border-b border-border-primary z-[9998] flex justify-between items-center">
+      <div className="lg:hidden fixed top-0 left-0 w-full h-20 bg-dark-gray border-b border-border-primary z-[9998] flex justify-between items-center">
         {/* Botón de menú a la izquierda */}
         <button 
           onClick={toggleSidebar} 
