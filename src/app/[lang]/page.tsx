@@ -1,6 +1,7 @@
 // src/app/[lang]/page.tsx
 import Title from "@/app/components/ui/MainTitle/MainTitle";
 import Hero from "@/app/components/sections/Hero";
+import CallToAction from "@/app/components/sections/CallToAction"; // Nuevo import
 import Sidebar from "@/app/components/layout/Sidebar/Sidebar";
 import Footer from "@/app/components/layout/Footer/Footer";
 
@@ -13,6 +14,7 @@ export default function Home() {
           <div className="max-w-8xl mx-auto">
             <Title />
             <Hero />
+            <CallToAction /> {/* Nuevo componente agregado */}
           </div>
         </div>
       </div>

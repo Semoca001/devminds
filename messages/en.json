@@ -10,5 +10,17 @@
     "about": "ABOUT",
     "contact": "CONTACT",
     "soon": "SOON"
+  },
+  "CTA": {
+    "terminalCommand": "init_project --with-excellence",
+    "title": "Ready to optimize your project?",
+    "description": "We transform ideas into efficient digital solutions. No unnecessary complexity, just results that work.",
+    "buttonText": "START_CONSULTATION",
+    "buttonHover": "execute_consultation",
+    "responseTime": "// Guaranteed response in < 24 hours",
+    "feature1": "Optimized architecture",
+    "feature2": "Clean and scalable code",
+    "feature3": "Zero technical debt",
+    "status": "Status: Ready for deployment"
   }
 }

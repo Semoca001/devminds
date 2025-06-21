@@ -10,5 +10,17 @@
     "about": "NOSOTROS",
     "contact": "CONTACTO",
     "soon": "PRÓXIMAMENTE"
+  },
+  "CTA": {
+    "terminalCommand": "init_project --with-excellence",
+    "title": "¿Listo para optimizar tu proyecto?",
+    "description": "Transformamos ideas en soluciones digitales eficientes. Sin complejidad innecesaria, solo resultados que funcionan.",
+    "buttonText": "INICIAR_CONSULTA",
+    "buttonHover": "ejecutar_consulta",
+    "responseTime": "// Respuesta garantizada en < 24 horas",
+    "feature1": "Arquitectura optimizada",
+    "feature2": "Código limpio y escalable",
+    "feature3": "Sin deuda técnica",
+    "status": "Status: Ready for deployment"
   }
 }
