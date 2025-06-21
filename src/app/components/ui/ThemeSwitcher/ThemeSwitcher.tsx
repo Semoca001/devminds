@@ -13,7 +13,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ className = '' }) => {
   const [mounted, setMounted] = useState(false);
   
   // Solo usar el hook después de que el componente esté montado
-  let theme = 'dark';
+  let theme = 'light';
   let toggleTheme = () => {};
   
   try {

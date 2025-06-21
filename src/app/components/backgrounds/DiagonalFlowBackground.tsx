@@ -13,14 +13,14 @@ const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgr
   const [mounted, setMounted] = useState(false);
   
   // Solo usar el hook después de que el componente esté montado
-  let theme = 'dark';
+  let theme = 'light';
   
   try {
     const themeContext = useTheme();
     theme = themeContext.theme;
   } catch {
-    // Si falla, usar tema oscuro por defecto hasta que se monte el provider
-    theme = 'dark';
+    // Si falla, usar tema claro por defecto hasta que se monte el provider
+    theme = 'light';
   }
 
   useEffect(() => {
@@ -45,8 +45,8 @@ const DiagonalFlowBackground = ({ children, className = '' }: DiagonalFlowBackgr
     diagonal: 'linear-gradient(135deg, transparent 25%, rgba(0, 255, 136, 0.08) 50%, transparent 75%)'
   };
 
-  // Usar tema oscuro por defecto hasta que se monte, luego usar el tema actual
-  const currentStyles = (mounted && theme === 'light') ? lightThemeStyles : darkThemeStyles;
+  // Usar tema claro por defecto hasta que se monte, luego usar el tema actual
+  const currentStyles = (mounted && theme === 'dark') ? darkThemeStyles : lightThemeStyles;
 
   return (
     <div className={`relative ${className}`}>

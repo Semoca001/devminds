@@ -23,34 +23,34 @@ const Contact = () => {
           <div className="card">
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.name')}
                 </label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-main border-2 border-gray-300 dark:border-border-primary rounded focus:border-primary focus:outline-none transition-colors text-main"
                   placeholder={t('form.namePlaceholder')}
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.email')}
                 </label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-main border-2 border-gray-300 dark:border-border-primary rounded focus:border-primary focus:outline-none transition-colors text-main"
                   placeholder={t('form.emailPlaceholder')}
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-secondary mb-2">
                   {t('form.message')}
                 </label>
                 <textarea 
                   rows={5}
-                  className="w-full px-4 py-3 bg-carbon border border-border-secondary rounded focus:border-primary focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-main border-2 border-gray-300 dark:border-border-primary rounded focus:border-primary focus:outline-none transition-colors resize-none text-main"
                   placeholder={t('form.messagePlaceholder')}
                 ></textarea>
               </div>

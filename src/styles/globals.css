@@ -51,11 +51,11 @@
 
   /* Card styles - Light theme */
   .light .card {
-    @apply bg-white border border-border-primary-light rounded-lg p-6 shadow-sm;
+    @apply bg-white border border-gray-300 rounded-lg p-6 shadow-sm;
   }
   
   .light .card-simple {
-    @apply bg-alice-blue border border-border-secondary-light rounded p-4;
+    @apply bg-alice-blue border border-gray-200 rounded p-4;
   }
   
   /* Typography utilities - Dark theme */
@@ -135,12 +135,31 @@
     @apply bg-white;
   }
 
+  /* Border utilities with better visibility */
   .border-main {
     @apply border-border-primary;
   }
   
   .light .border-main {
     @apply border-border-primary-light;
+  }
+
+  /* Sidebar specific borders */
+  .border-sidebar {
+    @apply border-border-primary;
+  }
+  
+  .light .border-sidebar {
+    @apply border-gray-300;
+  }
+
+  /* Footer specific borders */
+  .border-footer {
+    @apply border-border-primary;
+  }
+  
+  .light .border-footer {
+    @apply border-gray-300;
   }
 
   .text-main {

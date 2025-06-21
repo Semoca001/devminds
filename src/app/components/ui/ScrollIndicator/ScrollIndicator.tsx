@@ -48,7 +48,7 @@ const ScrollIndicator = ({ show }: ScrollIndicatorProps) => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="text-xs text-text-tertiary mt-2 font-mono"
+              className="text-xs text-tertiary mt-2 font-mono"
             >
               Desliza para ver más
             </motion.p>
