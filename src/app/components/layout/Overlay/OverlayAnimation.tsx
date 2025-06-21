@@ -20,7 +20,6 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Variantes de animación ORIGINALES (sin cambios)
   const overlayVariants = {
     mobile: {
       hidden: { y: '-100%', x: 0 },
@@ -70,7 +69,7 @@ export const OverlayAnimation = ({ isOpen, sidebarWidth = '5rem', children }: Ov
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bg-[#191919] z-10 border border-white/20"
+          className="fixed bg-dark-gray z-[9999] border border-border-primary"
           variants={overlayVariants[isMobile ? 'mobile' : 'desktop']}
           initial="hidden"
           animate="visible"
