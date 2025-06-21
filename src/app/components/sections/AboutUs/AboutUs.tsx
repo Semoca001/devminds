@@ -18,9 +18,9 @@ const AboutUs = () => {
           {t('description')}
         </p>
         
-        {/* Valores en cards */}
+        {/* Valores en cards integradas */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="card-simple text-center">
+          <div className="card-soft text-center hover:bg-white/80 dark:hover:bg-dark-gray/80 transition-all duration-300">
             <h3 className="title-sub mb-3 text-primary">
               {t('value1.title')}
             </h3>
@@ -29,7 +29,7 @@ const AboutUs = () => {
             </p>
           </div>
           
-          <div className="card-simple text-center">
+          <div className="card-soft text-center hover:bg-white/80 dark:hover:bg-dark-gray/80 transition-all duration-300">
             <h3 className="title-sub mb-3 text-primary">
               {t('value2.title')}
             </h3>
@@ -38,7 +38,7 @@ const AboutUs = () => {
             </p>
           </div>
           
-          <div className="card-simple text-center">
+          <div className="card-soft text-center hover:bg-white/80 dark:hover:bg-dark-gray/80 transition-all duration-300">
             <h3 className="title-sub mb-3 text-primary">
               {t('value3.title')}
             </h3>

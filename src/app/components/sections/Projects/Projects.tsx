@@ -24,13 +24,13 @@ const Projects = () => {
           </p>
         </div>
         
-        {/* Grid de proyectos */}
+        {/* Grid de proyectos con cards suaves */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {projects.map((project) => (
-            <div key={project.key} className="card hover:border-primary transition-colors duration-300">
-              {/* Placeholder para imagen */}
-              <div className="w-full h-48 bg-carbon rounded mb-4 flex items-center justify-center">
-                <span className="text-text-tertiary text-sm">Imagen del proyecto</span>
+            <div key={project.key} className="card-soft hover:bg-white/80 dark:hover:bg-dark-gray/80 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+              {/* Placeholder para imagen con fondo integrado */}
+              <div className="w-full h-48 bg-white/30 dark:bg-carbon/50 backdrop-blur-sm rounded mb-4 flex items-center justify-center border border-white/20 dark:border-border-secondary">
+                <span className="text-text-secondary dark:text-text-tertiary text-sm">Imagen del proyecto</span>
               </div>
               
               <h3 className="title-sub mb-2">
@@ -41,7 +41,7 @@ const Projects = () => {
                 {t(`${project.key}.description`)}
               </p>
               
-              <div className="text-code text-xs">
+              <div className="text-code text-xs bg-primary/10 dark:bg-primary/20 px-2 py-1 rounded">
                 {project.tech}
               </div>
             </div>

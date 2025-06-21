@@ -26,6 +26,7 @@ module.exports = {
           DEFAULT: '#00ff88',
           light: '#33ff99',
           dark: '#00cc6a',
+          'dark-contrast': '#00a855', // Verde más oscuro para modo claro
         },
         
         // Text Colors - adaptable
@@ -48,8 +49,8 @@ module.exports = {
         border: {
           primary: 'rgba(255, 255, 255, 0.2)', // dark theme
           secondary: 'rgba(255, 255, 255, 0.1)', // dark theme
-          'primary-light': 'rgba(0, 0, 0, 0.2)', // light theme - bordes negros
-          'secondary-light': 'rgba(0, 0, 0, 0.12)', // light theme - bordes negros más suaves
+          'primary-light': 'rgba(0, 0, 0, 0.12)', // light theme - sutil
+          'secondary-light': 'rgba(0, 0, 0, 0.08)', // light theme - muy sutil
         },
       },
       fontFamily: {

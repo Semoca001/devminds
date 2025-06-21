@@ -49,13 +49,22 @@
     @apply bg-dark-gray border border-border-secondary rounded p-4;
   }
 
-  /* Card styles - Light theme */
+  /* Card styles - Light theme - Más integradas */
   .light .card {
-    @apply bg-white border border-gray-300 rounded-lg p-6 shadow-sm;
+    @apply bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-lg p-6 shadow-sm;
   }
   
   .light .card-simple {
-    @apply bg-alice-blue border border-gray-200 rounded p-4;
+    @apply bg-white/50 backdrop-blur-sm border border-gray-100/50 rounded p-4;
+  }
+
+  /* Card glassmorphism para mejor integración */
+  .light .card-glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/30 rounded-lg p-6 shadow-lg;
+  }
+  
+  .light .card-soft {
+    @apply bg-white/60 backdrop-blur-sm border-0 rounded-lg p-6 shadow-sm;
   }
   
   /* Typography utilities - Dark theme */
@@ -150,7 +159,7 @@
   }
   
   .light .border-sidebar {
-    @apply border-gray-300;
+    @apply border-gray-200;
   }
 
   /* Footer specific borders */
@@ -159,7 +168,7 @@
   }
   
   .light .border-footer {
-    @apply border-gray-300;
+    @apply border-gray-200;
   }
 
   .text-main {
